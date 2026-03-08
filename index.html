@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Glassmorphism Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="bg-formulas" class="bg-formulas"></div>
+    <div class="calculator">
+        <!-- New Function Input Section -->
+        <div class="function-section">
+            <span class="fx-label">f(x) =</span>
+            <div id="function-display" class="fn-display"></div>
+        </div>
+
+        <div class="display">
+            <div class="previous-operand" id="previous-operand"></div>
+            <div class="current-operand" id="current-operand">0</div>
+        </div>
+
+        <!-- Solve Result Bar -->
+        <div class="solve-result" id="solve-result"></div>
+
+        <!-- Graph Canvas -->
+        <div class="canvas-container" id="canvas-container" style="display:none;">
+            <canvas id="graph-canvas"></canvas>
+        </div>
+
+        <div class="keypad">
+            <!-- Row 1 -->
+            <button class="btn btn-sci" data-action="sin">sin</button>
+            <button class="btn btn-sci" data-action="cos">cos</button>
+            <button class="btn btn-sci" data-action="tan">tan</button>
+            <button class="btn btn-sci" data-action="deg-rad" id="deg-rad-btn">RAD</button>
+            <button class="btn btn-action" data-action="clear">AC</button>
+            <button class="btn btn-action" data-action="delete">DEL</button>
+
+            <!-- Row 2 -->
+            <button class="btn btn-sci" data-action="log">log</button>
+            <button class="btn btn-sci" data-action="ln">ln</button>
+            <button class="btn btn-sci" data-action="sqrt">√</button>
+            <button class="btn btn-sci" data-action="power">^</button>
+            <button class="btn btn-action" data-action="percent">%</button>
+            <button class="btn btn-operator" data-action="divide">÷</button>
+
+            <!-- Row 3 -->
+            <button class="btn btn-sci" data-action="lparen">(</button>
+            <button class="btn btn-sci" data-action="rparen">)</button>
+            <button class="btn btn-sci" data-action="next" title="Exit Power">→</button>
+            <button class="btn btn-number" data-number="7">7</button>
+            <button class="btn btn-number" data-number="8">8</button>
+            <button class="btn btn-number" data-number="9">9</button>
+            <button class="btn btn-operator" data-action="multiply">×</button>
+
+            <!-- Row 4 -->
+            <button class="btn btn-sci" data-number="π">π</button>
+            <button class="btn btn-sci" data-number="e">e</button>
+            <button class="btn btn-number" data-number="4">4</button>
+            <button class="btn btn-number" data-number="5">5</button>
+            <button class="btn btn-number" data-number="6">6</button>
+            <button class="btn btn-operator" data-action="subtract">−</button>
+
+            <!-- Row 5 -->
+            <button class="btn btn-graph" data-action="graph">Graph</button>
+            <button class="btn btn-solve" data-action="solve">Solve</button>
+            <button class="btn btn-number" data-number="1">1</button>
+            <button class="btn btn-number" data-number="2">2</button>
+            <button class="btn btn-number" data-number="3">3</button>
+            <button class="btn btn-operator" data-action="add">+</button>
+
+            <!-- Row 6 -->
+            <button class="btn btn-var" data-number="x">x</button>
+            <button class="btn btn-var" data-number="y">y</button>
+            <button class="btn btn-number span-two" data-number="0">0</button>
+            <button class="btn btn-number" data-number=".">.</button>
+            <button class="btn btn-operator btn-equals" data-action="calculate">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
